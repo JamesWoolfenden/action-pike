@@ -1,7 +1,10 @@
 # action.yml
 name: 'pike is for permissions'
 description: 'Pike is for permissions!'
-icon: activity
+branding:
+  icon: 'activity'
+  color: 'green'
+
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
