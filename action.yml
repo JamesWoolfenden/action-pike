@@ -1,5 +1,5 @@
 # action.yml
-name: 'frank'
+name: 'captain-pike'
 description: 'Pike is for permissions!'
 inputs:
   who-to-greet:  # id of input
