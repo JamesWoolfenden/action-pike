@@ -18,7 +18,7 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://jameswoolfenden/pike:v0.2.12'
+  image: 'docker://jameswoolfenden/pike:v0.2.13'
   args:
     - ${{ inputs.file }}
     - ${{ inputs.directory }}
