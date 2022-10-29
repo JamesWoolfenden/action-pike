@@ -20,9 +20,15 @@ jobs:
         id: scan
         uses: JamesWoolfenden/action-pike@latest
         with:
-          directory: 'test'
+          directory: ./test
           verb: scan
-
+      - name: Readme
+        id: readme
+        uses: JamesWoolfenden/action-pike@latest
+        with:
+          directory: ./test
+          verb: readme
+          args: -auto
 
       # Use the output from the `hello` step
       - name: Get the output time
