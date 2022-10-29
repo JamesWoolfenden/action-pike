@@ -6,15 +6,16 @@ branding:
   color: 'green'
 
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'Frank'
+  file:  
+    description: 'file to scan'
+  directory:  
+    description: 'Directory to scan'  
 outputs:
-  time: # id of output
+  time: 
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://jameswoolfenden/pike:v0.2.11'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.file }}
+    - ${{ inputs.directory }}
