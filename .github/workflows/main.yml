@@ -28,7 +28,9 @@ jobs:
         with:
           directory: ./test
           verb: readme
-          args: -auto
+          auto: true
+          init: true
+          write: true
 
       # Use the output from the `hello` step
       - name: Get the output time
