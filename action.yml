@@ -13,6 +13,12 @@ inputs:
   verb:  
     description: 'The Pike action or verb to use: e.g. scan'
     default: scan    
+  auto:  
+    description: 'Appends Policy to Readme'   
+  init:  
+    description: 'Run Terraform init to download modules'     
+  output:  
+    description: 'Output types e.g. json terraform (default: "terraform")'      
 outputs:
   time: 
     description: 'The time we greeted you'
@@ -23,4 +29,7 @@ runs:
     - ${{ inputs.file }}
     - ${{ inputs.directory }}
     - ${{ inputs.verb }}
-
+    - ${{ inputs.auto }}
+    - ${{ inputs.write }}
+    - ${{ inputs.init }}
+    - ${{ inputs.output }}
