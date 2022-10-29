@@ -8,13 +8,13 @@ on:
 jobs:
   pike_is_for_permissions:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: pike
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Scan
+        id: scan
         uses: JamesWoolfenden/action-pike@latest
         with:
-          who-to-greet: 'Mona the Octocat'
+          directory: 'test'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.scan.outputs.time }}"
