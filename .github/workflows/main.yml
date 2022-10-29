@@ -10,11 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     name: pike
     steps:
+      - uses: actions/checkout@v2
+      - name: Version
+        id: version
+        uses: JamesWoolfenden/action-pike@latest
+        with:
+          action: version
       - name: Scan
         id: scan
         uses: JamesWoolfenden/action-pike@latest
         with:
           directory: 'test'
+          action: scan
+
+
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.scan.outputs.time }}"
