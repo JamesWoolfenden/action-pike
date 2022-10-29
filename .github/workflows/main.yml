@@ -30,7 +30,7 @@ jobs:
           verb: readme
           auto: true
           init: true
-          write: true
+          output: json
 
       # Use the output from the `hello` step
       - name: Get the output time
