@@ -23,7 +23,7 @@ inputs:
     description: 'Flag to write policy to file'   
 runs:
   using: 'docker'
-  image: 'docker://jameswoolfenden/pike:v0.2.16'
+  image: 'docker://jameswoolfenden/pike:v0.2.18'
   args:
     - ${{ inputs.file }}
     - ${{ inputs.directory }}
