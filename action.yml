@@ -21,9 +21,6 @@ inputs:
     description: 'Output types e.g. json terraform'    
   write:
     description: 'Flag to write policy to file'   
-outputs:
-  time: 
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'docker://jameswoolfenden/pike:v0.2.16'
