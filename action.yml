@@ -10,12 +10,17 @@ inputs:
     description: 'file to scan'
   directory:  
     description: 'Directory to scan'  
+  verb:  
+    description: 'The Pike action or verb to use: e.g. scan'
+    default: scan    
 outputs:
   time: 
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://jameswoolfenden/pike:v0.2.11'
+  image: 'docker://jameswoolfenden/pike:v0.2.12'
   args:
     - ${{ inputs.file }}
     - ${{ inputs.directory }}
+    - ${{ inputs.verb }}
+
